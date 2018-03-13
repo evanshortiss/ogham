@@ -57,5 +57,14 @@
   },
   "engines": {
     "node": ">=5"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanshortiss/ogham.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evanshortiss/ogham/issues"
+  },
+  "homepage": "https://github.com/evanshortiss/ogham#readme"
 }
