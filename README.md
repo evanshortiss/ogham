@@ -9,15 +9,21 @@ learning more about Ogham check out the
 
 
 As an example, the string `hello` will become `᚛ᚆᚓᚂᚂᚑ᚜` if converted to Ogham.
+Typically Ogham is read from bottom to top so our hello example above would be
+rotated 90 degrees counter clockwise.
+
+*Disclaimer: This module is still in development and results should be checked
+against with an Ogham reference such as those on Wikipedia and other
+websites*
 
 ## JavaScript Example
 
 ```js
 const ogham = require('ogham')
 
-console.log(ogham.convert('hello'))
+console.log(ogham.convert('ireland'))
 
-// prints "᚛ᚆᚓᚂᚂᚑ᚜"
+// prints "᚛ᚔᚏᚓᚂᚐᚅᚇ᚜"
 ```
 
 ## TypeScript/ES6 Example
@@ -25,9 +31,9 @@ console.log(ogham.convert('hello'))
 ```ts
 import * as ogham from 'ogham'
 
-console.log(ogham.convert('hello'))
+console.log(ogham.convert('ireland'))
 
-// prints "᚛ᚆᚓᚂᚂᚑ᚜"
+// prints "᚛ᚔᚏᚓᚂᚐᚅᚇ᚜"
 ```
 
 ## API
@@ -37,8 +43,8 @@ console.log(ogham.convert('hello'))
 Converts the given input string to its ogham representation. Supported options
 are:
 
-* `addBoundary` - Determines if the begging `᚛` and ending `᚜` characters
-should be added.
-* `useForfeda` - This enables use of the
+* `addBoundary: Boolean` - Determines if the begging `᚛` and ending `᚜`
+characters should be added.
+* `useForfeda: Boolean` - This enables use of the
 [Forfeda](https://en.wikipedia.org/wiki/Forfeda) characters. For example,
 instead of `ea` being printed as `ᚓᚐ` it will be printed as `ᚕ`.
