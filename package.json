@@ -1,0 +1,61 @@
+{
+  "name": "ogham",
+  "version": "0.1.0",
+  "description": "convert an input string to its Ogham equivalent",
+  "main": "src/ogham.js",
+  "scripts": {
+    "precommit": "format && npm test",
+    "format": "prettier --write src/*.js src/*.ts __test__/*.ts",
+    "prepublish": "tsc && npm run format ",
+    "test": "jest",
+    "coveralls": "cat coverage/lcov.info | coveralls"
+  },
+  "keywords": [
+    "ogham",
+    "irish",
+    "gaelic",
+    "ogam"
+  ],
+  "author": "Evan Shortiss <evanshortiss@gmail.com> (http://evanshortiss.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "~22.2.0",
+    "coveralls": "~3.0.0",
+    "husky": "~0.14.3",
+    "jest": "~22.4.2",
+    "prettier": "~1.11.1",
+    "ts-jest": "~22.4.1",
+    "typescript": "~2.7.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "cache": false,
+    "collectCoverage": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "engines": {
+    "node": ">=5"
+  }
+}
