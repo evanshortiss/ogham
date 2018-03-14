@@ -1,25 +1,29 @@
 {
   "name": "ogham",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "convert an input string to its Ogham equivalent",
   "main": "src/ogham.js",
+  "typings": "src/ogham.d.ts",
   "scripts": {
     "precommit": "npm run format && npm test",
-    "format": "prettier --write src/*.js src/*.ts __test__/*.ts",
+    "format": "prettier --write --single-quote src/*.js src/*.ts __test__/*.ts",
     "prepublish": "tsc && npm run format ",
-    "test": "jest",
+    "test": "tsc && jest",
     "coveralls": "cat coverage/lcov.info | coveralls"
   },
   "keywords": [
     "ogham",
     "irish",
     "gaelic",
-    "ogam"
+    "ogam",
+    "convert",
+    "transliterate"
   ],
   "author": "Evan Shortiss <evanshortiss@gmail.com> (http://evanshortiss.com/)",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "~22.2.0",
+    "@types/node": "~9.4.7",
     "coveralls": "~3.0.0",
     "husky": "~0.14.3",
     "jest": "~22.4.2",
