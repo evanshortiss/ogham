@@ -40,11 +40,23 @@ console.log(ogham.convert('ireland'))
 
 ### convert(input: string, options: OghamOptions)
 
-Converts the given input string to its ogham representation. Supported options
-are:
+Converts the given input string to its ogham representation. Supported keys in
+the options Object are:
 
 * `addBoundary: Boolean` - Determines if the begging `᚛` and ending `᚜`
 characters should be added.
 * `useForfeda: Boolean` - This enables use of the
 [Forfeda](https://en.wikipedia.org/wiki/Forfeda) characters. For example,
 instead of `ea` being printed as `ᚓᚐ` it will be printed as `ᚕ`.
+
+Here's an example: 
+
+```js
+const convertedText = ogham.convert('ireland', {
+  addBoundary: false
+})
+
+console.log(convertedText)
+
+// prints "ᚔᚏᚓᚂᚐᚅᚇ"
+```
