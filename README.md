@@ -40,8 +40,11 @@ console.log(ogham.convert('ireland'))
 
 ### convert(input: string, options: OghamOptions)
 
-Converts the given input string to its ogham representation. Supported keys in
-the options Object are:
+Converts the given input string to its ogham representation. Inputs must be A-Z
+characters without accents, e.g pass `a` instead of `á`. The letters `j`, `k`,
+`v`, `w`, `x`, and `y` are not supported.
+
+Supported keys in the options Object are:
 
 * `addBoundary: Boolean` - Determines if the begging `᚛` and ending `᚜`
 characters should be added.

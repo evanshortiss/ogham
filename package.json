@@ -4,7 +4,7 @@
   "description": "convert an input string to its Ogham equivalent",
   "main": "src/ogham.js",
   "scripts": {
-    "precommit": "format && npm test",
+    "precommit": "npm run format && npm test",
     "format": "prettier --write src/*.js src/*.ts __test__/*.ts",
     "prepublish": "tsc && npm run format ",
     "test": "jest",
